@@ -14,7 +14,7 @@ def jump_to_line(m):
     if line_number == 0:
         line_number = 1
 
-    press("cmd-g")
+    press("ctrl-g")
     Str(str(line_number))(None)
     press("enter")
 
@@ -71,8 +71,8 @@ context.keymap(
         "line up" + optional_numerals: repeat_function(2, "alt-up"),
         "line down" + optional_numerals: repeat_function(2, "alt-down"),
         # Navigating Interface
-        "explore tab": Key("shift-cmd-e"),
-        "search tab": Key("shift-cmd-f"),
+        "(explore tab | code explorer)": Key("shift-cmd-e"),
+        "(search tab | code search)": Key("shift-cmd-f"),
         "debug tab": Key("shift-cmd-d"),
         "source control tab": Key("shift-ctrl-g"),
         "extensions tab": Key("shift-cmd-x"),
@@ -94,5 +94,8 @@ context.keymap(
         "comment": Key("cmd-shift-7"),
         "search all": Key("cmd-shift-f"),
         "(drop-down | drop)": Key("ctrl-space"),
+        "flip": Key("cmd-0"),
+        "split left": Key("ctrl-cmd-left"),
+        "split right": Key("ctrl-cmd-right"),
     }
 )

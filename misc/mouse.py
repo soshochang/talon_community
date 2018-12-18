@@ -22,6 +22,14 @@ def on_move(typ, e):
 
 tap.register(tap.MMOVE, on_move)
 
+# def on_move(typ, e): 
+#     buttons = ctrl.mouse_buttons_down()
+#     if buttons and not e.flags & tap.DRAG:
+#         e.flags |= tap.DRAG
+#         e.button = buttons[0]
+#         e.modify() 
+        
+# tap.register(tap.MMOVE | tap.HOOK, on_move)
 
 def click_pos(m):
     word = m._words[0]
@@ -87,17 +95,24 @@ def mouse_release(m):
 
 keymap = {
     # jsc modified with some voice-code compatibility
-    "righty": delayed_right_click,
-    "(click | chiff)": delayed_click,
-    "(dubclick | duke)": delayed_dubclick,
+    # "righty": delayed_right_click,
+    "chipper": delayed_right_click,
+    # "(click | chiff)": delayed_click,
+    "(chiff)": delayed_click,
+    # "(dubclick | duke)": delayed_dubclick,
+    "(duke)": delayed_dubclick,
     "(tripclick | triplick)": delayed_tripclick,
-    "drag": mouse_drag,
-    "release": mouse_release,
+    # "drag": mouse_drag,
+    "pretzel": mouse_drag,
+    # "release": mouse_release,
+    "relish": mouse_release,
     # jsc added
     "(shift click | shicks)": shift_click,
     "(command click | chom lick)": command_click,
-    "wheel down": mouse_scroll(200),
-    "wheel up": mouse_scroll(-200),
+    # "wheel down": mouse_scroll(200),
+    "scroop": mouse_scroll(200),
+    # "wheel up": mouse_scroll(-200),
+    "scrodge": mouse_scroll(-200),
 }
 
 ctx.keymap(keymap)

@@ -67,7 +67,7 @@ def jump_tab(m):
 
 context.keymap(
     {
-        "(address bar | focus address | focus url | url)": focus_address_bar,
+        "(curly | address bar | focus address | focus url | url)": focus_address_bar,
         "copy url": Key("escape y y"),
         "back[ward]": back,
         "forward": forward,

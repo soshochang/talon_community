@@ -59,7 +59,7 @@ def command_line(command):
 
 ctx.keymap(
     {
-        "(address bar | focus address | focus url | url)": focus_address_bar,
+        "(curly | address bar | focus address | focus url | url)": focus_address_bar,
         "copy url": Key("escape y y"),
         "back[ward]": back,
         "forward": forward,

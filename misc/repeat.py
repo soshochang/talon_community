@@ -23,7 +23,7 @@ ctx.keymap(
     {
         "wink": Rep(1),
         "creek": RepPhrase(1),
-        "soup": Rep(2),
+        # "soup": Rep(2),
         "trace": Rep(3),
         "quarr": Rep(4),
         "fypes": Rep(5),
